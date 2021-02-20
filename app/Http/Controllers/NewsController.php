@@ -36,7 +36,7 @@ class NewsController extends Controller
 
     public function showCategoryNews(int $id, int $keyNews)
     {
-        $keyNews = $this->listNews[$keyNews];
+        $keyNews = $this->listNews[$keyNews] ?? 'Not found';
         $news = $this->categoryNews[$id] ?? 'Not found';
         return view('news.showCategoryNews', ['news' => $news, 'keyNews' => $keyNews]);
     }
