@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\Admin\IndexController;
+use App\Http\Controllers\Admin\NewsController as AdminNewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +17,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/news', function () {
-   return view('news');
-});
-
-/*Route::get('/', function () {
     return view('welcome');
-});*/
+});
+
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
+    Route::get('/', [IndexController::class, 'index']);
+    Route::resource('news', AdminNewsController::class);
+});
+
+Route::group(['prefix' => 'news', 'as' => 'news.'], function() {
+    Route::get('/', [NewsController::class, 'index'])
+        ->name('index');
+
+    Route::get('/{id}', [NewsController::class, 'show'])
+        ->where('id', '\d+')
+        ->name('show');
+
+});
+
+
+
