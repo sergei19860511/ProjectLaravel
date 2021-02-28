@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class NewsController extends Controller
+class OrderNewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $newsList = [];
-        return view('admin.news.index' ,['newsList' => $newsList]);
+        return view('news.order_news');
     }
 
     /**
@@ -25,7 +23,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('admin.news.add');
+        //
     }
 
     /**
@@ -36,7 +34,7 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        dd('hello');
+        dd($request->input('name'));
     }
 
     /**

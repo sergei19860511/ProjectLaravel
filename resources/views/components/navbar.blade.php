@@ -9,14 +9,17 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Главная</a>
+                    <a class="nav-link" href="{{ route('news.index') }}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">О нас</a>
+                    <a class="nav-link" href="#">О нас</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Контакты</a>
+                    <a class="nav-link" href="#">Контакты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('news.order') }}">Заказать новость</a>
                 </li>
             </ul>
         </div>
