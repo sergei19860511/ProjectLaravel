@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group">
                     <label for="title">Описание категории</label>
-                    <textarea class="form-control" name="discription"></textarea>
+                    <textarea class="form-control" name="description"></textarea>
                 </div>
                 </div>
                 <br>

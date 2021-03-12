@@ -17,6 +17,7 @@
                     <th>Заголовок</th>
                     <th>Слаг</th>
                     <th>Дата</th>
+                    <th>Управление</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -26,7 +27,9 @@
                         <td>{{ $category->title }}</td>
                         <td>{{ $category->slug }}</td>
                         <td>{{ $category->created_at }}</td>
-                    </tr>
+                        <td><a href="{{ route('admin.categories.show', ['category' => $category->id]) }}">Пр.</a> &nbsp;
+                            <a href="#">Ред.</a> &nbsp;
+                            <a href="">Уд.</a></td>
                 @empty
                     <tr>
                         <td colspan="4"><h3>Записей нет</h3></td>

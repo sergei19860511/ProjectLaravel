@@ -42,6 +42,3 @@ Route::group(['prefix' => 'news', 'as' => 'news.'], function() {
     Route::resource('order_news', OrderNewsController::class);
 
 });
-
-
-
