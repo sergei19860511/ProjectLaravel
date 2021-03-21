@@ -42,3 +42,5 @@ Route::group(['prefix' => 'news', 'as' => 'news.'], function() {
     Route::resource('order_news', OrderNewsController::class);
 
 });
+
+Route::get('/example/{category}', fn(\App\Models\Category $category) => $category);
