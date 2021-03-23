@@ -75,7 +75,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        dd(data_get());
+        dd($request->all());
     }
 
     /**

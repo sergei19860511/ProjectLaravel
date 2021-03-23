@@ -10,8 +10,9 @@
 
         <!-- Content Row -->
         <div>
-            <form action="{{ route('admin.categories.update', ['category' => $category]) }}" method="Put">
+            <form action="{{ route('admin.categories.update', ['category' => $category]) }}" method="Post">
                 @csrf
+                @method('PUT')
                 <div class="col-6">
                     <div class="form-group">
                         <label for="title">Название категории</label>
