@@ -27,8 +27,8 @@
                         <td>{{ $category->title }}</td>
                         <td>{{ $category->slug }}</td>
                         <td>{{ $category->created_at }}</td>
-                        <td><a href="{{ route('admin.categories.show', ['category' => $category->id]) }}">Пр.</a> &nbsp;
-                            <a href="#">Ред.</a> &nbsp;
+                        <td><a href="{{ route('admin.categories.show', ['category' => $category]) }}">Пр.</a> &nbsp;
+                            <a href="{{ route('admin.categories.edit', ['category' => $category]) }}">Ред.</a> &nbsp;
                             <a href="">Уд.</a></td>
                 @empty
                     <tr>
